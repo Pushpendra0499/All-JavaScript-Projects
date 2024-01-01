@@ -1,0 +1,125 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.home{
+    position:sticky;
+    /* z-index: +25px; */
+    
+}
+.container-1{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d; 
+    /* ===>  element are rended in 3d space */
+    z-index: -1;
+}
+
+#btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index:+10px;
+    scroll-behavior: smooth;
+    /*  */
+    
+}
+
+.background{
+     transform: translateZ(-40px) scale(5); 
+      /* Note ===> change the position */
+}
+
+.foreground{
+    transform: translateZ(-40px) scale(5);
+}
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1; 
+     /* Note ===> The z-index property measures the stacking of positioned elements, while translateZ() moves objects in 3D spac */
+}
+
+h1{
+    position: absolute;
+    font-size: 10rem;
+    color: #09fa09;
+    top: 10rem;
+    font-family:'Times New Roman', Times, serif ;
+
+    letter-spacing: 5px;
+    text-shadow:  0 0 10px rgba(0,0,0,0.3) ;
+
+}
+
+section{
+    background-color: rgb(53, 135,211);
+    color: white;
+    padding: 5rem 0;
+    /* display: flex;
+    flex-direction: column; */
+
+}
+
+.secheading{
+    /* background-color: orange; */
+    font-size: 5rem;
+    padding:0 10rem;
+    /* width: fit-content; */
+
+}
+.desc{
+    
+ position: absolute;
+ background-color: rgb(130, 127, 127);
+ 
+ padding: 0.5rem 2.5rem;
+ top: 50%;
+ left: 50%;
+ transform: translateX(-50%) translateY(-50%);
+ color: #cdff05;
+
+ font-size: 3.5rem;
+ font-weight:600;
+
+
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin:5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position:center;
+    background-size: cover;
+    height: 500px;
+}
+
+.bg1{
+    background-image: url(./images/sport-1.jpg);
+}
+.bg2{
+    background-image: url(./images/sport-2.jpg);
+}
+.bg3{
+    background-image: url(./images/sport-3.jpg);
+}
+
